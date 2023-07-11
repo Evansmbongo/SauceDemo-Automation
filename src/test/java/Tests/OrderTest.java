@@ -19,7 +19,8 @@ public class OrderTest {
 
     @BeforeMethod
     public void setUp(){
-        System.setProperty("webdriver.chrome.driver","C:/chromedriver.exe" );
+        System.setProperty("webdriver.chrome.driver","C:/Users/EvansMbongo/Desktop" +
+                "/SeleniumJava/SauceDemoAutomation/src/main/resources/chromedriver.exe" );
         driver = new ChromeDriver();
         driver.get("https://www.saucedemo.com/");
     }
@@ -31,7 +32,7 @@ public class OrderTest {
         driver.findElement(By.xpath("(//input[@id='login-button'])[1]")).click();
 
 //        Add the sauce labs Backpack, Sauce labs Onesie, and Sauce Labs Bolt T-shirt to
-//        the car
+//        the cart
 
         WebElement backpack = driver.findElement(By.xpath("//button[@id='add-to-cart-sauce-labs" +
                 "-backpack']"));
